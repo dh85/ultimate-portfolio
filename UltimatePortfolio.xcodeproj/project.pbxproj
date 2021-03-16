@@ -11,6 +11,11 @@
 		97EAF79B260103E3004201DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAF79A260103E3004201DD /* ContentView.swift */; };
 		97EAF79D260103E3004201DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97EAF79C260103E3004201DD /* Assets.xcassets */; };
 		97EAF7A0260103E3004201DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97EAF79F260103E3004201DD /* Preview Assets.xcassets */; };
+		97EB8E2526010F3C00686A52 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97EB8E2326010F3C00686A52 /* Main.xcdatamodeld */; };
+		97EB8E282601109B00686A52 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB8E272601109B00686A52 /* DataController.swift */; };
+		97EB8E2E260114A100686A52 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EB8E2D260114A100686A52 /* CloudKit.framework */; };
+		97EB8E302601162300686A52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB8E2F2601162300686A52 /* HomeView.swift */; };
+		97EB8E332601170A00686A52 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB8E322601170A00686A52 /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,12 @@
 		97EAF79C260103E3004201DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97EAF79F260103E3004201DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97EAF7A1260103E3004201DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97EB8E2426010F3C00686A52 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		97EB8E272601109B00686A52 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		97EB8E2A2601148100686A52 /* UltimatePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimatePortfolio.entitlements; sourceTree = "<group>"; };
+		97EB8E2D260114A100686A52 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		97EB8E2F2601162300686A52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		97EB8E322601170A00686A52 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97EB8E2E260114A100686A52 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +50,7 @@
 			children = (
 				97EAF797260103E3004201DD /* UltimatePortfolio */,
 				97EAF796260103E3004201DD /* Products */,
+				97EB8E2C260114A100686A52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,10 +65,15 @@
 		97EAF797260103E3004201DD /* UltimatePortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				97EB8E2A2601148100686A52 /* UltimatePortfolio.entitlements */,
 				97EAF798260103E3004201DD /* UltimatePortfolioApp.swift */,
 				97EAF79A260103E3004201DD /* ContentView.swift */,
+				97EB8E2F2601162300686A52 /* HomeView.swift */,
+				97EB8E322601170A00686A52 /* ProjectsView.swift */,
 				97EAF79C260103E3004201DD /* Assets.xcassets */,
 				97EAF7A1260103E3004201DD /* Info.plist */,
+				97EB8E2326010F3C00686A52 /* Main.xcdatamodeld */,
+				97EB8E272601109B00686A52 /* DataController.swift */,
 				97EAF79E260103E3004201DD /* Preview Content */,
 			);
 			path = UltimatePortfolio;
@@ -67,6 +85,14 @@
 				97EAF79F260103E3004201DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97EB8E2C260114A100686A52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97EB8E2D260114A100686A52 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97EB8E332601170A00686A52 /* ProjectsView.swift in Sources */,
+				97EB8E2526010F3C00686A52 /* Main.xcdatamodeld in Sources */,
+				97EB8E282601109B00686A52 /* DataController.swift in Sources */,
 				97EAF79B260103E3004201DD /* ContentView.swift in Sources */,
+				97EB8E302601162300686A52 /* HomeView.swift in Sources */,
 				97EAF799260103E3004201DD /* UltimatePortfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/UltimatePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UltimatePortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = 548X9JAQV4;
@@ -289,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/UltimatePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UltimatePortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = 548X9JAQV4;
@@ -328,6 +360,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		97EB8E2326010F3C00686A52 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				97EB8E2426010F3C00686A52 /* Main.xcdatamodel */,
+			);
+			currentVersion = 97EB8E2426010F3C00686A52 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 97EAF78D260103E3004201DD /* Project object */;
 }
