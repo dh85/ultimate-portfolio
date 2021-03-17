@@ -53,6 +53,8 @@ struct HomeView: View {
                                 .background(Color.secondarySystemGroupedBackground)
                                 .cornerRadius(10)
                                 .shadow(color: Color.black.opacity(0.2), radius: 5)
+                                .accessibilityElement(children: .ignore)
+                                .accessibilityLabel("\(project.projectTitle), \(project.projectItems.count) items, \(project.completionAmount * 100, specifier: "%g")% complete.")
                             }
                         }
                         .padding([.horizontal, .top])
@@ -68,10 +70,16 @@ struct HomeView: View {
             }
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
+            .toolbar {
+                Button("Add Data") {
+                    dataController.deleteAll()
+                    try? dataController.createSampleData()
+                }
+            }
         }
     }
     
-    @ViewBuilder func list(_ title: String, for items: FetchedResults<Item>.SubSequence) -> some View {
+    @ViewBuilder func list(_ title: LocalizedStringKey, for items: FetchedResults<Item>.SubSequence) -> some View {
         if items.isEmpty {
             EmptyView()
         } else {
@@ -108,11 +116,6 @@ struct HomeView: View {
         }
     }
 }
-
-//Button("Add Data") {
-//    dataController.deleteAll()
-//    try? dataController.createSampleData()
-//}
 
 struct HomeView_Previews: PreviewProvider {
     static var dataController = DataController.preview

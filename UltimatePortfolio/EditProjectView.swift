@@ -53,6 +53,11 @@ struct EditProjectView: View {
                         .onTapGesture {
                             color = item
                         }
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityAddTraits(
+                            item == color ? [.isButton, .isSelected] : .isButton
+                        )
+                        .accessibilityLabel(LocalizedStringKey(item))
                     }
                 }
                 .padding(.vertical)
