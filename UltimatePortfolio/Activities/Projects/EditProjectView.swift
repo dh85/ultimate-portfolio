@@ -38,7 +38,7 @@ struct EditProjectView: View {
 
             Section(header: Text("Custom project color")) {
                 LazyVGrid(columns: colorColumns) {
-                    ForEach(Project.colors, id: \.self, content: colorButton)
+                    ForEach(Project.colours, id: \.self, content: colorButton)
                 }
                 .padding(.vertical)
             }

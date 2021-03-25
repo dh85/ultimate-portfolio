@@ -63,7 +63,7 @@ struct EditItemView: View {
 struct EditItemView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EditItemView(item: Item.example)
+            EditItemView(item: .example)
         }
     }
 }

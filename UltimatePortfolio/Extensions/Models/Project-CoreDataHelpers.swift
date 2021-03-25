@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Project {
-    static let colors = [
+    static let colours = [
         "Pink",
         "Purple",
         "Red",
@@ -75,7 +75,7 @@ extension Project {
     }
 
     static var example: Project {
-        let controller = DataController(inMemory: true)
+        let controller = DataController.preview
         let viewContext = controller.container.viewContext
 
         let project = Project(context: viewContext)
@@ -89,7 +89,7 @@ extension Project {
 
     func projectItems(using sortOrder: Item.SortOrder) -> [Item] {
         switch sortOrder {
-        case .optimized:
+        case .optimised:
             return projectItemsDefaultSorted
         case .title:
             return projectItems.sorted(by: \Item.itemTitle)
